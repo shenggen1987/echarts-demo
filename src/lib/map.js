@@ -209,7 +209,7 @@ var series = [];
                 }
             },
             symbolSize: function (val) {
-                return val[2] / 8;
+                return val[2] / 4;
             },
             itemStyle: {
                 normal: {
@@ -229,10 +229,11 @@ var option = {
     backgroundColor: '#404a59',
     title : {
         text: '仟金顶合同金额分布图',
-        subtext: '数据纯属虚构',
+        subtext: '仟金顶',
         left: 'center',
         textStyle : {
-            color: '#000'
+            color: '#fff',
+            fontSize: 30
         }
     },
     tooltip : {
@@ -259,7 +260,7 @@ var option = {
         }
     },
     bmap: {
-        center: [107.741111, 33.166113],
+        center: [103.29677, 37.684609],
         zoom: 5,
         roam: false,
         mapStyle: {
@@ -277,6 +278,33 @@ var option = {
                     "elementType": "all",
                     "stylers": {
                               "visibility": "off"
+                    }
+          			},
+          			{
+                    "featureType": "land",
+                    "elementType": "geometry.fill",
+                    "stylers": {
+                              "color": "#303845",
+                              "lightness": 1,
+                              "visibility": "on"
+                    }
+         				},
+         				{
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": {
+                              "color": "#232931",
+                              "visibility": "on"
+                    }
+          			},
+          			{
+                    "featureType": "boundary",
+                    "elementType": "geometry",
+                    "stylers": {
+                              "color": "#5a6b7f",
+                              "weight": "0.8",
+                              "lightness": 1,
+                              "visibility": "on"
                     }
           			}
             ]

@@ -81,9 +81,13 @@ export default {
       var dd = arr[currentIndex]
       var marker1 = new BMap.Marker(new BMap.Point(dd.x, dd.y), { icon: myIcon })
       bmap.addOverlay(marker1)
-      var infoWindow1 = new BMap.InfoWindow(dd.title + '<br>合同金额: 1210万<br>签约时间: 2017-06-28')
+      var content = '<div id="BMapLib_SearchInfo">' + dd.title + '<br>合同金额: 1210万<br>签约时间: 2017-06-28</div>'
+      var infoWindow1 = new BMap.InfoWindow(content)
       marker1.openInfoWindow(infoWindow1)
-    }, 2000)
+      $('.BMap_shadow').hide()
+      $('.BMap_pop').fadeOut(2000, function () {
+      })
+    }, 4000)
   }
 }
 </script>
@@ -115,4 +119,10 @@ a {
   width: 100%;
   height: 100%;
 }
+
+.BMap_shadow{
+  display: none;
+}
+
+
 </style>
